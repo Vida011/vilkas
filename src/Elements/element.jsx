@@ -7,4 +7,10 @@ const element = (
     </div>
     );
 
-export default element;
+    const kvadratas = (
+        <div style={{width: '50px', padding: '40px', border: '1px solid red'}}>
+        
+        </div>
+        );
+    
+export {element};

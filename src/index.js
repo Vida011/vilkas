@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {element} from './Elements/element';
 
-import App from './Components/App';
+// import App from './Components/App';
+
+
+const superElement = (
+  <div>
+   <h1>Hello, Bebras!</h1>
+   <small>Labas</small>
+   </div>
+);
+
 
 ReactDOM.render(
-  <App per={'griovį'}/>,
+  
+   element
+,
   document.getElementById('root')
 );
 
