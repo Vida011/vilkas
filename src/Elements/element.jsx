@@ -1,16 +1,12 @@
 import person from '../Data/person';
-
-const element = (
-    <div>
-    <h1>Hello, Barsukas!</h1>
-    <small>{person.name} {person.surname}</small>
-    </div>
-    );
-
-    const kvadratas = (
-        <div style={{width: '50px', padding: '40px', border: '1px solid red'}}>
-        
+const Element(props) { // index.js propsui savybės patenka čia ir iš paimamos į
+    return (
+        <div>
+            <h1>Hello, Barsukas!</h1>
+            <small>{props.name}{props.surname}</small> // ČIA.  
         </div>
-        );
+    );
     
-export {element};
+}
+
+export default Element;
