@@ -1,8 +1,14 @@
 import Kvadratas from './Kvadratas';
 
-function App(props) {
+const data = ['Rudasis', 'Juodasis', 'Brigadininkas'];
+
+function App() {
     return (<>
-        <Kvadratas/>
+
+        {data.map((b, i) =>  <Kvadratas key={i} bebras={b} />)} //šitoj vietoj kažką grąžinam
+        // čia i, tai indeksas
+      
+   
         </>);
     }
     
