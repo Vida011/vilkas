@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-// import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import Element from "./Components/element";
+import Element from "./Elements/element";
 
 import App from "./Components/App";
-
+import {Traukiniai} from './Components/App';
 // const superElement = (
 //   <div>
 //    <h1>Hello, Bebras!</h1>
@@ -21,7 +20,7 @@ import App from "./Components/App";
 // );
 
 ReactDOM.render(
-  <App/>,
+  <Traukiniai/>,
   document.getElementById("root")
 );
 

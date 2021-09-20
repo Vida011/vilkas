@@ -1,4 +1,7 @@
 import Kvadratas from './Kvadratas';
+// import test from './nd1/img/01.jpg'
+
+import trains from './nd1/data';
 
 const data = ['Rudasis', 'Juodasis', 'Brigadininkas'];
 
@@ -11,5 +14,13 @@ function App() {
    
         </>);
     }
+
+function Traukiniai() {
+    return (<>
+    {trains.map((values, index) =><img key={index} src={values.img} alt='img'/>)}
+</>);  
+}
     
 export default App;
+export{Traukiniai}
+
