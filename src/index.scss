@@ -19,8 +19,11 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: : 40px; // dedam, kad kvadratai nesuliptų
-  span {
+  margin: 40px; // dedam, kad kvadratai nesuliptų
+  span {            // span'as yra Kvadrato VAIKAS
     font-size: 30px;
+  }
+  &.br {        // &-reiškia '.kvadratas'
+    background-color: greenyellow;
   }
 }
