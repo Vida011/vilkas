@@ -13,24 +13,24 @@ code {
 }
 
 .kvadratas {
-  width: 123px;
-  height: 123px;
+  width: 223px;
+  height: 223px;
   background-color: pink;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 40px; // dedam, kad kvadratai nesuliptų
   span {            // span'as yra Kvadrato VAIKAS
-    font-size: 30px;
+    font-size: 25px;
   }
   &.br {        // &-reiškia '.kvadratas'
     background-color: greenyellow;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .kvadratas{
-    width: 63px;
-    height: 63px;
-  }
-}
+// @media screen and (max-width: 500px) {
+//   .kvadratas{
+//     width: 63px;
+//     height: 63px;
+//   }
+// }

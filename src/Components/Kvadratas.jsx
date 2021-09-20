@@ -8,7 +8,7 @@ function Kvadratas(props) {
         <b>
           <Bebras bebras={props.bebras} />
         </b>{" "}
-        //čia turim Bebro komponentą
+       
       </div>
     );
   }
@@ -16,7 +16,7 @@ function Kvadratas(props) {
   return (
     // šito jau nebegrąžins
     <div className='kvadratas'>
-      <Bebras bebras={props.bebras} /> //čia turim Bebro komponentą
+      <Bebras bebras={props.bebras} /> 
     </div>
   );
 }

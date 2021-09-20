@@ -1,3 +1,5 @@
+// šiame faile yra App komponetas, kurio viduje yra Kvadrato komp., o šio viduje Bebro komp.
+
 import Kvadratas from './Kvadratas';
 // import test from './nd1/img/01.jpg'
 

@@ -6,6 +6,7 @@ import Element from "./Elements/element";
 
 import App from "./Components/App";
 import {Traukiniai} from './Components/App';
+import Bebras from "./Components/Bebras";
 // const superElement = (
 //   <div>
 //    <h1>Hello, Bebras!</h1>
@@ -20,7 +21,7 @@ import {Traukiniai} from './Components/App';
 // );
 
 ReactDOM.render(
-  <Traukiniai/>,
+  <App/>,
   document.getElementById("root")
 );
 
