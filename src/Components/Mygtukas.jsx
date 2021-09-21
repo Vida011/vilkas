@@ -1,39 +1,22 @@
-import React from 'react';
+import React from "react";
 
-class Bebras extends React.Component {
+class Mygtukas extends React.Component {
   constructor() {
     super();
-    this.state = {date: new Date()};
-    this.tick = this.tick.bind(this);
+    // this.state = {date: new Date()};
   }
 
-    tick() {
-        this.setState( {date: new Date()} );
-    }
+  componentDidMount() {}
 
-    componentDidMount() {
-        console.log('jau', this.props.bebras);
-
-        document.querySelector('.kvadratas').
-        addEventListener('click, this.tick');
-    
-
-        this.timerID = setInterval(this.tick,1000 );
- }
-
- componentWillUnmount() {
-     clearInterval(this.timerID);
- }
+  componentWillUnmount() {}
 
   render() {
     return (
-      <span>
-        {this.props.bebras}
-        <hr />
-        {this.state.date.toLocaleTimeString()}
-      </span>
+      <div className="container">
+        <div classNam="submit-feedback">{this.props.tekstas}</div>
+      </div>
     );
   }
 }
 
-export default Bebras;
+export default Mygtukas;
