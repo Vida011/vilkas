@@ -59,6 +59,7 @@ code {
 .container {
   @extend .center-content;
   margin: 10px;
+  text-decoration: none;
 }
 
 .submit-feedback {
@@ -92,4 +93,8 @@ code {
   to {
     background-position: 100% 0;
   }
+}
+
+#root {
+  padding: 50px;
 }

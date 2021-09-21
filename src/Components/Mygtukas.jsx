@@ -3,25 +3,41 @@ import React from "react";
 class Mygtukas extends React.Component {
   constructor() {
     super();
-    // this.state = {date: new Date()};
+    this.state = {counter: 0};
   }
 
-  activateLasers() {
-    console.log(`Lazeriai ${this.props.tekstas} aktyvuoti`);
+  activateLasers(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    // Wrong
+    // this.setState({
+    //     counter: this.state.counter + 1, 
+    // })
+
+    // Correct
+    this.setState(state => ({counter: state.counter + 1}));  // state yra obj.
+    
   }
 
-  componentDidMount() {
-    document.querySelector("#root").addEventListener("click", (e) => {
-      console.log("Valio");
-    });
+  valio(e) {
+    console.log("Valio");
   }
+
+  componentDidMount() {}
 
   componentWillUnmount() {}
 
   render() {
     return (
-      <div className="container" onClick={() => this.activateLasers()}>
-        <div className="submit-feedback">{this.props.tekstas}</div>
+      <div onClick={(e) => this.valio(e)}>
+        // sukuriam teva, kuris bus React'o vaikas
+        <a
+          href=""
+          className="container"
+          onClick={(e) => this.activateLasers(e)}
+        >
+          <div className="submit-feedback">{this.props.tekstas} {this.state.counter}</div>
+        </a>
       </div>
     );
   }
