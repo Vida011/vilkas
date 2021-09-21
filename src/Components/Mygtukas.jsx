@@ -1,4 +1,5 @@
 import React from "react";
+import CountDisplay from './CountDisplay';
 
 class Mygtukas extends React.Component {
   constructor() {
@@ -15,7 +16,7 @@ class Mygtukas extends React.Component {
     // })
 
     // Correct
-    this.setState(state => ({counter: state.counter + 1}));  // state yra obj.
+    this.setState((state, props) => ({counter: state.counter + props.amount}));  // state yra obj.
     
   }
 
@@ -38,6 +39,7 @@ class Mygtukas extends React.Component {
         >
           <div className="submit-feedback">{this.props.tekstas} {this.state.counter}</div>
         </a>
+        <CountDisplay digit={this.state.counter}></CountDisplay>
       </div>
     );
   }
