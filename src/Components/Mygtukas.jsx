@@ -1,5 +1,6 @@
 import React from "react";
 import CountDisplay from './CountDisplay';
+import Mygtukas2 from './Mygtukas2';
 
 class Mygtukas extends React.Component {
   constructor() {
@@ -7,7 +8,7 @@ class Mygtukas extends React.Component {
     this.state = {counter: 0};
   }
 
-  activateLasers(e) {
+  activateLasers = (e) => {
     e.preventDefault();
     e.stopPropagation();
     // Wrong
@@ -37,6 +38,7 @@ class Mygtukas extends React.Component {
           <div className="submit-feedback">{this.props.tekstas} {this.state.counter}</div>
         </a>
         <CountDisplay digit={this.state.counter}></CountDisplay>
+        <Mygtukas2 virve={this.activateLasers}></Mygtukas2>
       </div>
     );
   }

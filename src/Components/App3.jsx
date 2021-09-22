@@ -6,11 +6,12 @@ const data = [['Spausk',1], ['Spaudinėk', 10], ['Klikink', 100]];
 
 // ir ta Mygtuka renderina:
 function App() {
-    return (
-        <div> // grąžinsim rutulį
+    return (<> //mygtukui turim perduoti: tekstas
 
-        </div>
-        );
+        {data.map((b, i) =>  <Mygtukas key={i} tekstas={b[0]} amount={b[1]} />)} //šitoj vietoj kažką grąžinam
+        // čia 'i', tai indeksas
+    
+        </>);
     }
 
 export default App;
