@@ -44,8 +44,8 @@ code {
 //   }
 // }
 .nice-d{
-    width: 30px;
-  height: 30px;
+    width: 40px;
+  height: 40px;
   background-color: pink;
   display: flex;
   align-items: center;
@@ -111,4 +111,13 @@ code {
 
 #root {
   padding: 50px;
+}
+
+.bin {
+  margin: 20px; // kad atstumai būtų
+  padding: 10px;
+  border: 3px dotted orangered; // kad aiškai matytusi, kur tas kompon.apsiriboja
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
