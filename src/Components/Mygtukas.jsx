@@ -29,13 +29,13 @@ class Mygtukas extends React.Component {
   componentWillUnmount() {}
 
   render() {
+    
     return (
       <div onClick={(e) => this.valio(e)}>
         // sukuriam teva, kuris bus React'o vaikas
         <a
           href=""
-          className="container"
-          onClick={(e) => this.activateLasers(e)}
+          className="container" onClick={(e) => this.activateLasers(e)}
         >
           <div className="submit-feedback">{this.props.tekstas} {this.state.counter}</div>
         </a>

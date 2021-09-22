@@ -51,6 +51,10 @@ code {
   align-items: center;
   justify-content: center;
   margin: 10px;
+  padding: 5px;
+  &.green {
+    background-color: greenyellow;
+  }
 
 }
 
