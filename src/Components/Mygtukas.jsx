@@ -35,7 +35,7 @@ class Mygtukas extends React.Component {
       <div className="bin" onClick={(e) => this.valio(e)}>
         <a href=""className="container" onClick={(e) => this.activateLasers(e)}
         >
-          <div className="submit-feedback">{this.props.tekstas} {this.state.counter}</div>
+          <div className="submit-feedback">{this.props.tekstas}</div>
         </a>
         <CountDisplay digit={this.state.counter}></CountDisplay>
         <Mygtukas2 virve={this.activateLasers}></Mygtukas2>
