@@ -1,20 +1,29 @@
-// sitas App komponentas pasikviecia Mygtuka:
-// import Mygtukas from "./Mygtukas";
+import React from "react";
 
-//mygtuku data bus ivairi:
-// const data = [
-//   ["Spausk", 1],
-//   ["Spaudinėk", 10],
-//   ["Klikink", 100],
-// ];
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {bg: "palegreen"};
+  }
 
-// ir ta Mygtuka renderina:
-function App() {
-  return (
-    <div className="greenCircle">
-      <button className="container">Jaaa!</button>
-    </div>
-  );
+  changeColor = () => ({
+    // this.setState({
+    //     bg: 'orangered',
+    // });
+
+    this.setState(state => {
+        return(
+        {bg: state.bg == 'palegreen' ? 'orangered': 'palegreen'};
+
+  }
 }
+  render() {
+    return (
+      <div className="circle" style={{ backgroundColor: this.state. bg}}>
+        <button className="container" onClick={this.changeColor}>Jaaa!</button>
+      </div>
+    )};
+  }
+
 
 export default App;

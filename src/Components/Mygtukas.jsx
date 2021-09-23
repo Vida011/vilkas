@@ -3,6 +3,7 @@ import CountDisplay from './CountDisplay';
 import Mygtukas2 from './Mygtukas2';
 
 class Mygtukas extends React.Component {
+  
   constructor() {
     super();
     this.state = {counter: 0};
