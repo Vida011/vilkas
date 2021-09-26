@@ -28,23 +28,25 @@ code {
     monospace;
 }
 
-// .kvadratas {
-//   width: 223px;
-//   height: 223px;
-//   background-color: pink;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin: 40px; // dedam, kad kvadratai nesuliptų
-//   span {            // span'as yra Kvadrato VAIKAS
-//     font-size: 25px;
-//   }
-//   &.br {        // &-reiškia '.kvadratas'
-//     background-color: greenyellow;
-//   }
-// }
-.nice-d{
-    width: 40px;
+.kvadratas {
+  width: 223px;
+  height: 223px;
+  background-color: pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px; // dedam, kad kvadratai nesuliptų
+  span {
+    // span'as yra Kvadrato VAIKAS
+    font-size: 25px;
+  }
+  &.br {
+    // &-reiškia '.kvadratas'
+    background-color: greenyellow;
+  }
+}
+.nice-d {
+  width: 40px;
   height: 40px;
   background-color: pink;
   display: flex;
@@ -55,7 +57,6 @@ code {
   &.green {
     background-color: greenyellow;
   }
-
 }
 
 // @media screen and (max-width: 500px) {
@@ -123,12 +124,23 @@ code {
 }
 
 .circle {
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  input {
+    font-size: 20px;
+    outline: none;
+    border: none;
+    text-align: center;
+    margin: 5px;
+  }
+  .input-button {
+    margin: 5px;
+  }
 }
 
 button {
@@ -140,7 +152,58 @@ button {
   color: peru;
   border-radius: 10%;
   cursor: pointer;
-  position: absolute;
-  top: 20;
+  position: relative;
+  margin: 5px;
+  &.input-button-small {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(205, 63, 110);
+    padding: 8px;
+  }
+  .reg {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+  }
+}
 
+.small-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin: 5px;
+  span {
+    font-size: 27px;
+    letter-spacing: 2px;
+    color: black;
+    padding: 16px;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 100px;
+    }
+  }
+}
+
+.field {
+  display: flex;
+  .farm {
+    width: 50%;
+    margin: 9px;
+    padding: 8px;
+    border: 4px dashed greenyellow;
+  }
+  h1 {
+    color: greenyellow;
+  }
 }
