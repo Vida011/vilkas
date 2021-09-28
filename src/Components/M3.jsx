@@ -1,18 +1,31 @@
-import Component from './Component';
 import React from 'react';
 
-class Stalas extends React.Component {
+
+class M3 extends React.Component {
 
     constructor(props) {
       super(props);
-    //   this.state = {date: new Date()};
+    this.state = {x: 3};
     }
-  
+    do3 = () => {
+        this.setState((state) => ({x: state.x += 3}));
+
+    }
+
+    componentDidMount() {
+      const x = localStorage.getItem('xxx'));
+      if (null === x) {
+          return;
+      }
+      this.setState({
+          x: x
+      })
+  }
     render() {
       return (
-        <Component per={this.props.per} name={'Labas'} surname={'Antanai'}></Component>
+        <button onClick={this.do3}>{this.state.x}x</button>
       );
     }
   }
 
-  export default Stalas;
+  export default M3;
