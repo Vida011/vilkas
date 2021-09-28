@@ -1,4 +1,3 @@
-nes (29 sloc) 1020 Bytes
 import React from 'react';
 class SmallAnimal extends React.Component {
 
