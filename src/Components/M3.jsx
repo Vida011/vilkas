@@ -8,17 +8,17 @@ class M3 extends React.Component {
     this.state = {x: 3};
     }
     do3 = () => {
-      localStorage.setItem('xxx', this.state.x + 3);
+      localStorage.setItem('xxx', +this.state.x + 3);
         this.setState((state) => ({x: state.x += 3}));
     }
 
     componentDidMount() {
-      const x = localStorage.getItem('xxx'));
+      const x = localStorage.getItem('xxx');
       if (null === x) {
           return;
       }
       this.setState({
-          x: x
+          x: parseInt(x)
       })
   }
     render() {
