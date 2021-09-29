@@ -8,8 +8,8 @@ class M3 extends React.Component {
     this.state = {x: 3};
     }
     do3 = () => {
+      localStorage.setItem('xxx', this.state.x + 3);
         this.setState((state) => ({x: state.x += 3}));
-
     }
 
     componentDidMount() {
