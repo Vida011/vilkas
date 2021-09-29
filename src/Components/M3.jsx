@@ -7,6 +7,16 @@ class M3 extends React.Component {
       super(props);
     this.state = {x: 3};
     }
+
+    // const [x, set3X] = useState(3);
+    // const x = 3
+    // const set3X = set3X
+    // f setState == set3X
+
+    // set3X = () => {
+    //   return x + 3;
+    // }
+
     do3 = () => {
       localStorage.setItem('xxx', +this.state.x + 3);
         this.setState((state) => ({x: state.x += 3}));
