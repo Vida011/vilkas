@@ -1,4 +1,4 @@
-import { Link, Switch, Route } from "react-router-dom";
+import { Link, Switch, Route,} from "react-router-dom";
 import Street from './Street';
 
 function LinkuMiskas() {
@@ -22,7 +22,7 @@ function LinkuMiskas() {
         <Route path={"/road"}>
           <h1>The Road</h1>
         </Route>
-        
+
         <Route path={"/:street"} children={<Street/>} />
   
      
