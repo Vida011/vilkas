@@ -1,24 +1,25 @@
-import React, {useState, useEffect, useLayoutEffect} from 'react';
+import React, {useState, useEffect,} from 'react';
 import axios from 'axios';
+import Knyga from './Knyga';
 
 function App() {
 
-    const [todos, setTodos] = useState;
-
+    const [books, setbooks] = useState;
 
     useEffect (()=> {
-        console.log('start');
-        axios.get('https://jsonplaceholder.typicode.com/todos/1')
+        console.log('Start');
+        axios.get('https://in3.dev/knygos/')
         .then(function (response) {
             console.log(response.data);
+            setBooks(response.data);
         })
     
     }, []);
 
-    return (<div className="todo-container">
-        {todos.map((todo)=>(<Todo key = {todo.id} data={todo}></Todo>))}
+    return (<div className="books-container">
+        {books.map((book)=>(<Knyga key = {book.id} data={book}></Knyga>))}
      
-        </>);
+        </div>);
     }
 
 export default App;
