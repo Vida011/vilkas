@@ -1,4 +1,4 @@
-const animals = [ //turim masyvą
+ export const animals = [ //turim masyvą
     {id: 1, name: 'Bebras'}, //turim objektą
     {id: 2, name: 'Vilkas'},
     {id: 3, name: 'Lokys'},
@@ -6,7 +6,6 @@ const animals = [ //turim masyvą
     {id: 5, name: 'Laukinis katinas'},
     {id: 6, name: 'Ungurys'},
  
-]
+];
 
 
-export default animals;
