@@ -1,10 +1,18 @@
-import Zoo from './Zoo';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { useRef } from "react";
 
 function App() {
-return (<Router>
-    <Zoo/>
-    </Router>);
-}
+    const counter = useRef(0);
+    const [turboCounter, setTurboCounter] = useState(0);
 
-export default App;
+    const clicker = () = {
+        counter.current++;
+        console.log('kaunteris:', counter.current);
+    }
+    return(<>
+    <div>REF: {counter.current}</div
+
+    </div>
+
+    
+    )
+}
