@@ -14,3 +14,5 @@ function Post({data, crud}) {
 
     );
 }
+
+export default Post;
