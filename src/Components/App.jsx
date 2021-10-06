@@ -10,7 +10,7 @@ function App() {
 
     useEffect(() => {
 
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get('https://localhost:3003/posts')
         .then(function (response) {
             console.log(response.data);
             setPosts(response.data);
