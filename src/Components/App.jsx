@@ -3,19 +3,18 @@ import axios from 'axios';
 import Post from './Post';
 import NewPost from './NewPost';
 
-
 function App() {
 
     const [posts, setPosts] = useState([]);
+    const [postsUpdateTime, setPostsUpdateTime] = useState(Date.now());
 
     useEffect(() => {
-
-        axios.get('https://localhost:3003/posts')
+        axios.get('http://localhost:3003/posts')
         .then(function (response) {
             console.log(response.data);
             setPosts(response.data);
         })
-    }, []);
+    }, [postsUpdateTime]);
 
     const doDelete = id => {
         axios.delete('https://jsonplaceholder.typicode.com/posts/'+id, {
@@ -29,10 +28,11 @@ function App() {
     }
 
     const doAdd = (data) => {
-        axios.post('https://jsonplaceholder.typicode.com/posts/', data
+        axios.post('http://localhost:3003/posts', data
         )
           .then(function (response) {
             console.log(response);
+            setPostsUpdateTime(Date.now());
           })
           .catch(function (error) {
             console.log(error);
@@ -54,4 +54,5 @@ function App() {
         </div>
     </div>);
     }
+    
 export default App;
