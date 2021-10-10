@@ -2,42 +2,54 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Post from './Post';
 import NewPost from './NewPost';
+import PostModal from './PostModal';
 
 function App() {
 
     const [posts, setPosts] = useState([]);
     const [postsUpdateTime, setPostsUpdateTime] = useState(Date.now());
+    const [open, setOpen] = useState(0);
+    const modalPost = useRef({title:'',body:''});
 
     useEffect(() => {
         axios.get('http://localhost:3003/posts')
-        .then(function (response) {
-            console.log(response.data);
+        .then(response => {
             setPosts(response.data);
         })
     }, [postsUpdateTime]);
 
     const doDelete = id => {
-        axios.delete('https://jsonplaceholder.typicode.com/posts/'+id, {
+        axios.delete('https://localhost:3003/posts/'+id, {
           })
-          .then(function (response) {
-            console.log(response);
+          .then(() => {
+            setPostsUpdateTime(Date.now());
           })
-          .catch(function (error) {
-            console.log(error);
-          });
     }
 
     const doAdd = (data) => {
         axios.post('http://localhost:3003/posts', data
         )
-          .then(function (response) {
-            console.log(response);
-            setPostsUpdateTime(Date.now());
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-    }
+        .then(() => {
+          setPostsUpdateTime(Date.now());
+        })
+  }
+
+  const doEdit = (data) => {
+    axios.put('http://localhost:3003/posts/'+data.id, data
+    )
+      .then(() => {
+        setPostsUpdateTime(Date.now());
+      })
+}
+
+  const openModal = (data) => {
+      modalPost.current = {title:data.title, body:data.body};
+      setOpen(data.id);
+  }
+
+  const closeModal = () => {
+      setOpen(0);
+  }
 
     const crud = {
         delete: doDelete
@@ -52,6 +64,7 @@ function App() {
         <div className="posts-container">
             {posts.map((post)=>(<Post key={post.id} data={post} crud={crud}/>))}
         </div>
+        <PostModal crud={crud} id={open} data={modalPost.current}/>
     </div>);
     }
     
